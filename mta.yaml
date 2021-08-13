@@ -36,7 +36,7 @@ modules:
  - name: schema_evolution-db-deployer
  # ------------------------------------------------------------
    type: hdb
-   path: db  
+   path: db
    parameters:
      buildpack: nodejs_buildpack
    requires:
