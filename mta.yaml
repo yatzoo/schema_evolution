@@ -17,21 +17,6 @@ build-parameters:
       - npx -p @sap/cds-dk cds build --production
 
 modules:
- # --------------------- SERVER MODULE ------------------------
- - name: schema_evolution-srv
- # ------------------------------------------------------------
-   type: nodejs
-   path: srv
-   parameters:
-     buildpack: nodejs_buildpack
-   requires:
-    # Resources extracted from CAP configuration
-    - name: schema_evolution-db
-   provides:
-    - name: srv-api      # required by consumers of CAP services (e.g. approuter)
-      properties:
-        srv-url: ${default-url}
-
  # -------------------- SIDECAR MODULE ------------------------
  - name: schema_evolution-db-deployer
  # ------------------------------------------------------------
