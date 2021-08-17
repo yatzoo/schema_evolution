@@ -13,5 +13,6 @@
     "eslint.options": {
         "configFile": "/home/user/.node_modules_global/lib/node_modules/@sap/cds-dk/lib/lint/.eslintrc.js"
     },
-    "actions": []
+    "actions": [],
+    "SAP HANA Database Artifacts.lastSelectedTargetPath": "/home/user/projects/schema_evolution/db/src"
 }

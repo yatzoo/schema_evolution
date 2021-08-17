@@ -1,5 +1,11 @@
 {
   "definitions": {
+    "csm.evolution.UUID": {
+      "kind": "type",
+      "type": "cds.String",
+      "length": 57,
+      "@cds.persistence.name": "CSM_EVOLUTION_UUID"
+    },
     "csm.evolution.STATIONS": {
       "kind": "entity",
       "@cds.persistence.journal": true,
@@ -8,7 +14,7 @@
           "@title": "UUID",
           "key": true,
           "type": "cds.String",
-          "length": 55,
+          "length": 57,
           "@cds.persistence.name": "UUID"
         },
         "NAME": {
@@ -64,17 +70,17 @@
       "kind": "entity",
       "@cds.persistence.journal": true,
       "elements": {
-        "DATE": {
-          "@title": "DATE",
+        "DATE_TIME": {
+          "@title": "DATE_TIME",
           "key": true,
           "type": "cds.UTCTimestamp",
-          "@cds.persistence.name": "DATE"
+          "@cds.persistence.name": "DATE_TIME"
         },
         "STATION_UUID": {
           "@title": "STATION_UUID",
           "key": true,
           "type": "cds.String",
-          "length": 55,
+          "length": 57,
           "@cds.persistence.name": "STATION_UUID"
         },
         "DIESEL": {
@@ -117,7 +123,7 @@
           "@title": "UUID",
           "key": true,
           "type": "cds.String",
-          "length": 55,
+          "length": 57,
           "@cds.persistence.name": "UUID"
         },
         "NAME": {
@@ -172,17 +178,17 @@
     "csm.evolution.PRICES_TAB": {
       "kind": "entity",
       "elements": {
-        "DATE": {
-          "@title": "DATE",
+        "DATE_TIME": {
+          "@title": "DATE_TIME",
           "key": true,
           "type": "cds.UTCTimestamp",
-          "@cds.persistence.name": "DATE"
+          "@cds.persistence.name": "DATE_TIME"
         },
         "STATION_UUID": {
           "@title": "STATION_UUID",
           "key": true,
           "type": "cds.String",
-          "length": 55,
+          "length": 57,
           "@cds.persistence.name": "STATION_UUID"
         },
         "DIESEL": {
@@ -218,39 +224,21 @@
       },
       "@cds.persistence.name": "CSM_EVOLUTION_PRICES_TAB"
     },
-    "Prices_Stations": {
+    "CSM_EVOLUTION_CV": {
       "kind": "entity",
       "@cds.persistence.exists": true,
       "@cds.persistence.calcview": true,
       "elements": {
-        "UUID": {
-          "@title": "UUID: UUID",
-          "key": true,
-          "type": "cds.String",
-          "length": 55
-        },
-        "NAME": {
-          "@title": "NAME: NAME",
-          "key": true,
-          "type": "cds.String",
-          "length": 1000
-        },
-        "BRAND": {
-          "@title": "BRAND: BRAND",
-          "key": true,
-          "type": "cds.String",
-          "length": 1000
-        },
-        "CITY": {
-          "@title": "CITY: CITY",
-          "key": true,
-          "type": "cds.String",
-          "length": 34
-        },
-        "DATE": {
-          "@title": "DATE: DATE",
+        "DATE_TIME": {
+          "@title": "DATE_TIME: DATE_TIME",
           "key": true,
           "type": "cds.UTCTimestamp"
+        },
+        "STATION_UUID": {
+          "@title": "STATION_UUID: STATION_UUID",
+          "key": true,
+          "type": "cds.String",
+          "length": 36
         },
         "DIESEL": {
           "@title": "DIESEL: DIESEL",
@@ -264,44 +252,87 @@
         },
         "E10": {
           "@title": "E10: E10",
+          "key": true,
+          "type": "cds.Double"
+        },
+        "DIESELCHANGE": {
+          "@title": "DIESELCHANGE: DIESELCHANGE",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "E5CHANGE": {
+          "@title": "E5CHANGE: E5CHANGE",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "E10CHANGE": {
+          "@title": "E10CHANGE: E10CHANGE",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "NAME": {
+          "@title": "NAME: NAME",
+          "key": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "BRAND": {
+          "@title": "BRAND: BRAND",
+          "key": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "STREET": {
+          "@title": "STREET: STREET",
+          "key": true,
+          "type": "cds.String",
+          "length": 500
+        },
+        "HOUSE_NUMBER": {
+          "@title": "HOUSE_NUMBER: HOUSE_NUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 20
+        },
+        "POST_CODE": {
+          "@title": "POST_CODE: POST_CODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CITY": {
+          "@title": "CITY: CITY",
+          "key": true,
+          "type": "cds.String",
+          "length": 34
+        },
+        "LATITUDE": {
+          "@title": "LATITUDE: LATITUDE",
+          "key": true,
+          "type": "cds.Double"
+        },
+        "LONGITUDE": {
+          "@title": "LONGITUDE: LONGITUDE",
           "key": true,
           "type": "cds.Double"
         }
       }
     },
-    "Prices_Stations_TAB": {
+    "CSM_EVOLUTION_CV_TAB": {
       "kind": "entity",
       "@cds.persistence.exists": true,
       "@cds.persistence.calcview": true,
       "elements": {
-        "UUID": {
-          "@title": "UUID: UUID",
-          "key": true,
-          "type": "cds.String",
-          "length": 55
-        },
-        "NAME": {
-          "@title": "NAME: NAME",
-          "key": true,
-          "type": "cds.String",
-          "length": 1000
-        },
-        "BRAND": {
-          "@title": "BRAND: BRAND",
-          "key": true,
-          "type": "cds.String",
-          "length": 1000
-        },
-        "CITY": {
-          "@title": "CITY: CITY",
-          "key": true,
-          "type": "cds.String",
-          "length": 34
-        },
-        "DATE": {
-          "@title": "DATE: DATE",
+        "DATE_TIME": {
+          "@title": "DATE_TIME: DATE_TIME",
           "key": true,
           "type": "cds.UTCTimestamp"
+        },
+        "STATION_UUID": {
+          "@title": "STATION_UUID: STATION_UUID",
+          "key": true,
+          "type": "cds.String",
+          "length": 57
         },
         "DIESEL": {
           "@title": "DIESEL: DIESEL",
@@ -315,6 +346,67 @@
         },
         "E10": {
           "@title": "E10: E10",
+          "key": true,
+          "type": "cds.Double"
+        },
+        "DIESELCHANGE": {
+          "@title": "DIESELCHANGE: DIESELCHANGE",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "E5CHANGE": {
+          "@title": "E5CHANGE: E5CHANGE",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "E10CHANGE": {
+          "@title": "E10CHANGE: E10CHANGE",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "NAME": {
+          "@title": "NAME: NAME",
+          "key": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "BRAND": {
+          "@title": "BRAND: BRAND",
+          "key": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "STREET": {
+          "@title": "STREET: STREET",
+          "key": true,
+          "type": "cds.String",
+          "length": 500
+        },
+        "HOUSE_NUMBER": {
+          "@title": "HOUSE_NUMBER: HOUSE_NUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 20
+        },
+        "POST_CODE": {
+          "@title": "POST_CODE: POST_CODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CITY": {
+          "@title": "CITY: CITY",
+          "key": true,
+          "type": "cds.String",
+          "length": 34
+        },
+        "LATITUDE": {
+          "@title": "LATITUDE: LATITUDE",
+          "key": true,
+          "type": "cds.Double"
+        },
+        "LONGITUDE": {
+          "@title": "LONGITUDE: LONGITUDE",
           "key": true,
           "type": "cds.Double"
         }
