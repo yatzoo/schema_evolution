@@ -1,5 +1,5 @@
 context csm.evolution {
-    type UUID : String(57);
+    type UUID : String(50);
 
     @cds.persistence.journal
     Entity ![STATIONS] {
@@ -75,7 +75,7 @@ key     ![LONGITUDE]: Double  @title: 'LONGITUDE: LONGITUDE' ;
 @cds.persistence.calcview
 Entity ![CSM_EVOLUTION_CV_TAB] {
 key     ![DATE_TIME]: Timestamp  @title: 'DATE_TIME: DATE_TIME' ; 
-key     ![STATION_UUID]: String(57)  @title: 'STATION_UUID: STATION_UUID' ; 
+key     ![STATION_UUID]: UUID  @title: 'STATION_UUID: STATION_UUID' ; 
 key     ![DIESEL]: Double  @title: 'DIESEL: DIESEL' ; 
 key     ![E5]: Double  @title: 'E5: E5' ; 
 key     ![E10]: Double  @title: 'E10: E10' ; 

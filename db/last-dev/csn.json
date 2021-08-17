@@ -3,7 +3,7 @@
     "csm.evolution.UUID": {
       "kind": "type",
       "type": "cds.String",
-      "length": 57,
+      "length": 50,
       "@cds.persistence.name": "CSM_EVOLUTION_UUID"
     },
     "csm.evolution.STATIONS": {
@@ -14,7 +14,7 @@
           "@title": "UUID",
           "key": true,
           "type": "cds.String",
-          "length": 57,
+          "length": 50,
           "@cds.persistence.name": "UUID"
         },
         "NAME": {
@@ -80,7 +80,7 @@
           "@title": "STATION_UUID",
           "key": true,
           "type": "cds.String",
-          "length": 57,
+          "length": 50,
           "@cds.persistence.name": "STATION_UUID"
         },
         "DIESEL": {
@@ -123,7 +123,7 @@
           "@title": "UUID",
           "key": true,
           "type": "cds.String",
-          "length": 57,
+          "length": 50,
           "@cds.persistence.name": "UUID"
         },
         "NAME": {
@@ -188,7 +188,7 @@
           "@title": "STATION_UUID",
           "key": true,
           "type": "cds.String",
-          "length": 57,
+          "length": 50,
           "@cds.persistence.name": "STATION_UUID"
         },
         "DIESEL": {
@@ -332,7 +332,7 @@
           "@title": "STATION_UUID: STATION_UUID",
           "key": true,
           "type": "cds.String",
-          "length": 57
+          "length": 36
         },
         "DIESEL": {
           "@title": "DIESEL: DIESEL",
