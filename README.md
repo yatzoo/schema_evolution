@@ -1,8 +1,8 @@
 # Getting Started
 
-This repositoru contains sample database schema used for demonstration purposes in the blog:
-Table lifecycle (aka Schema Evolution) in SAP HANA (Cloud) with .hdbmigrationtable
-https://blogs.sap.com/?p=1387782
+This repository contains sample database schema used for demonstration purposes in the blog:
+**Table lifecycle (aka Schema Evolution) in SAP HANA (Cloud) with .hdbmigrationtable**
+available at https://blogs.sap.com/?p=1387782
 
 It contains these folders and files, following our recommended project layout:
 
