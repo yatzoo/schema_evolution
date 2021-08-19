@@ -1,0 +1,146 @@
+{
+  "definitions": {
+    "csm.evolution.UUID": {
+      "kind": "type",
+      "type": "cds.String",
+      "length": 51,
+      "@cds.persistence.name": "CSM_EVOLUTION_UUID"
+    },
+    "csm.evolution.STATIONS": {
+      "kind": "entity",
+      "@cds.persistence.journal": true,
+      "elements": {
+        "STATION_UUID": {
+          "@title": "UUID",
+          "key": true,
+          "type": "cds.String",
+          "length": 51,
+          "@cds.persistence.name": "STATION_UUID"
+        },
+        "NAME": {
+          "@title": "NAME",
+          "type": "cds.String",
+          "length": 1000,
+          "@cds.persistence.name": "NAME"
+        },
+        "BRAND": {
+          "@title": "BRAND",
+          "type": "cds.String",
+          "length": 1000,
+          "@cds.persistence.name": "BRAND"
+        },
+        "CITY": {
+          "@title": "CITY",
+          "type": "cds.String",
+          "length": 34,
+          "@cds.persistence.name": "CITY"
+        }
+      },
+      "@cds.persistence.name": "CSM_EVOLUTION_STATIONS"
+    },
+    "csm.evolution.PRICES": {
+      "kind": "entity",
+      "@cds.persistence.journal": true,
+      "elements": {
+        "DATE_TIME": {
+          "@title": "DATE_TIME",
+          "key": true,
+          "type": "cds.UTCTimestamp",
+          "@cds.persistence.name": "DATE_TIME"
+        },
+        "STATION_UUID": {
+          "@title": "STATION_UUID",
+          "key": true,
+          "type": "cds.String",
+          "length": 51,
+          "@cds.persistence.name": "STATION_UUID"
+        },
+        "DIESEL": {
+          "@title": "DIESEL",
+          "type": "cds.Double",
+          "@cds.persistence.name": "DIESEL"
+        },
+        "E5": {
+          "@title": "E5",
+          "type": "cds.Double",
+          "@cds.persistence.name": "E5"
+        },
+        "E10": {
+          "@title": "E10",
+          "type": "cds.Double",
+          "@cds.persistence.name": "E10"
+        }
+      },
+      "@cds.persistence.name": "CSM_EVOLUTION_PRICES"
+    },
+    "csm.evolution.STATIONS_TAB": {
+      "kind": "entity",
+      "elements": {
+        "UUID": {
+          "@title": "UUID",
+          "key": true,
+          "type": "cds.String",
+          "length": 51,
+          "@cds.persistence.name": "UUID"
+        },
+        "NAME": {
+          "@title": "NAME",
+          "type": "cds.String",
+          "length": 1000,
+          "@cds.persistence.name": "NAME"
+        },
+        "BRAND": {
+          "@title": "BRAND",
+          "type": "cds.String",
+          "length": 1000,
+          "@cds.persistence.name": "BRAND"
+        },
+        "CITY": {
+          "@title": "CITY",
+          "type": "cds.String",
+          "length": 34,
+          "@cds.persistence.name": "CITY"
+        }
+      },
+      "@cds.persistence.name": "CSM_EVOLUTION_STATIONS_TAB"
+    },
+    "csm.evolution.PRICES_TAB": {
+      "kind": "entity",
+      "elements": {
+        "DATE_TIME": {
+          "@title": "DATE_TIME",
+          "key": true,
+          "type": "cds.UTCTimestamp",
+          "@cds.persistence.name": "DATE_TIME"
+        },
+        "STATION_UUID": {
+          "@title": "STATION_UUID",
+          "key": true,
+          "type": "cds.String",
+          "length": 51,
+          "@cds.persistence.name": "STATION_UUID"
+        },
+        "DIESEL": {
+          "@title": "DIESEL",
+          "type": "cds.Double",
+          "@cds.persistence.name": "DIESEL"
+        },
+        "E5": {
+          "@title": "E5",
+          "type": "cds.Double",
+          "@cds.persistence.name": "E5"
+        },
+        "E10": {
+          "@title": "E10",
+          "type": "cds.Double",
+          "@cds.persistence.name": "E10"
+        }
+      },
+      "@cds.persistence.name": "CSM_EVOLUTION_PRICES_TAB"
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v2.5.2"
+  },
+  "$version": "2.0"
+}

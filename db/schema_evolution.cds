@@ -1,9 +1,9 @@
 context csm.evolution {
-    type UUID : String(50); // UUID used as join column for PRICES and STATIONS tables
+    type UUID : String(51); // UUID used as join column for PRICES and STATIONS tables
 
     @cds.persistence.journal
     Entity ![STATIONS] {
-    key ![UUID]: UUID  @title: 'UUID' ; 
+    key ![STATION_UUID]: UUID  @title: 'UUID' ; 
         ![NAME]: String(1000)  @title: 'NAME' ; 
         ![BRAND]: String(1000)  @title: 'BRAND' ; 
         ![CITY]: String(34)  @title: 'CITY' ; 
