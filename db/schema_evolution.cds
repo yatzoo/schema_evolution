@@ -1,9 +1,13 @@
 context csm.evolution {
-    type UUID : String(51); // UUID used as join column for PRICES and STATIONS tables
+    // Change#001: New field length
+    type UUID : String(51);
+    // Change#001: Previous definition:
+    // type UUID : String(50);
+
 
     @cds.persistence.journal
     Entity ![STATIONS] {
-    key ![STATION_UUID]: UUID  @title: 'UUID' ; 
+    key ![STATION_UUID]: UUID  @title: 'UUID' ; // Change#002: UUID renamed to STATION_UUID
         ![NAME]: String(1000)  @title: 'NAME' ; 
         ![BRAND]: String(1000)  @title: 'BRAND' ; 
         ![CITY]: String(34)  @title: 'CITY' ; 
@@ -19,7 +23,7 @@ context csm.evolution {
     };
 
     Entity ![STATIONS_TAB] {
-    key ![UUID]: UUID  @title: 'UUID' ; 
+    key ![STATION_UUID]: UUID  @title: 'UUID' ;
         ![NAME]: String(1000)  @title: 'NAME' ; 
         ![BRAND]: String(1000)  @title: 'BRAND' ; 
         ![CITY]: String(34)  @title: 'CITY' ; 

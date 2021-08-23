@@ -76,12 +76,12 @@
     "csm.evolution.STATIONS_TAB": {
       "kind": "entity",
       "elements": {
-        "UUID": {
+        "STATION_UUID": {
           "@title": "UUID",
           "key": true,
           "type": "cds.String",
           "length": 51,
-          "@cds.persistence.name": "UUID"
+          "@cds.persistence.name": "STATION_UUID"
         },
         "NAME": {
           "@title": "NAME",
