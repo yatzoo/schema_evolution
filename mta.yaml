@@ -40,7 +40,7 @@ resources:
      service: hana  # or 'hanatrial' on trial landscapes
      service-plan: hdi-shared
      config:
-      database_id: 4880dcd5-8bf1-430f-999a-1333672b8da1
+#      database_id: <specify DB ID if you want to use non-default HANA tenant when deploying to CF space>
       schema: evolution
    properties:
      hdi-service-name: ${service-name}
